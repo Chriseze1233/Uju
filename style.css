@@ -59,7 +59,10 @@ body {
 .pos-abs {
     position: absolute;
 }
+.pos-fixed {
 
+    position: fixed;
+}
 .var-cnt {
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -704,7 +707,72 @@ textarea.inps {
     color: var(--color-six);
 }
 /* Contact Styling End */
-/* Footer Styling */
+
+
+.birthday {
+    z-index: 100000;
+    top: -100%;
+    left: 0;
+    padding: .5em 1.2em;
+    right: 0;
+    transition: .5s;
+    background: var(--color-six-gradient);
+    height: 100vh;
+    backdrop-filter: 100px;
+}
+
+.birthday.show {
+    top: 0;
+    transition: .5s;
+}
+
+.bith {
+    position: relative;
+    top: 2em;
+    background: var(--color-four);
+    font-size: .9em;
+    color: var(--color-five);
+    border-radius: .5em;
+    padding: .5em;
+    box-shadow: var(--box-shadow-one);
+}
+
+.bith h2 {
+    text-align: center;
+}
+
+.bith span {
+    color: var(--color-one);
+}
+
+.bith h2 span.r {
+    display: block;
+}
+
+.box-dates {
+    padding: .15em;
+    background: var(--color-six-gradient);
+    color: var(--color-four);
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    border-radius: .25em;
+    margin: 0 .1em;
+    backdrop-filter: blur(1px);
+    box-shadow: var(--box-shadow-one);
+}
+
+.btn-close {
+    padding: .5em;
+}
+
+.bwish {
+    text-align: center;
+}
+
+.bwish a {
+    color: var(--color-six);
+}/* Footer Styling */
 .footer-title {
     color: var(--color-five);
     font-size: 1.5em;
@@ -820,18 +888,42 @@ textarea.inps {
 
 @media screen and (max-width: 767px) {
     .nav {
+
         position: fixed;
-        left: 0;
-        width: 100%;
-        min-height: 100vh;
-        background: var(--color-six);
-        top: -100vh;
-        padding: .5em;
+        right: .5em;
+        width: fit-content;
+        height: fit-content;
+        background: var(--color-six-gradient);
+        top: 10vh;
+        padding: 1.5em;
         flex-direction: column;
+        border-radius: .5em;
+        transform: scaleX(0);
+        box-shadow: var(--box-shadow-one);
+        backdrop-filter: blur(1px);
+    }
+    
+    .navBar .e {
+        width: 100%;
+        height: 100%;
+        z-index: 100000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        background-color: transparent;
+    }
+    
+    .fas.fa-bars {
+        pointer-events: none;
+    }
+    
+    .nav li a.active {
+        color: var(--color-one);
     }
 
     .nav.active {
-        top: 0;
+        transform: scaleX(1);
     }
     
     .navBar {
@@ -845,18 +937,13 @@ textarea.inps {
         text-align: center;
     }
 
-    .h-hero {
-        background-position:  top center;
-    }
-
     .h-hero::before {
         opacity: .4;
     }
 
     .nav-btns {
         bottom: 10%;
-    }
-}
+    }}
 
 @media screen and (max-width: 637px) {
     .grid-many-spans {
