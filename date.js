@@ -103,7 +103,7 @@ function getDays() {
 
 
 
-window.setTimeout(() => mainCont.classList.add("show"), 2000);
+window.setTimeout(() => mainCont.classList.add("show"), 3000);
 btn_close.addEventListener('click', () => {
     mainCont.classList.remove('show')
 })
