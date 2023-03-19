@@ -13,13 +13,12 @@ let srcs=  [
 
 const btn_faqs = document.querySelectorAll('.open-btn');
 const ans = document.querySelectorAll('.ans');
-const vidPlay = document.querySelectorAll('.vid-play');
-const vid = document.querySelectorAll('.vid');
-const navBar = document.querySelector('.navBar');
+//const vidPlay = document.querySelectorAll('.vid-play');
+//const vid = document.querySelectorAll('.vid');
+const navBar = document.querySelector('.navBar .e');
 const nav = document.querySelector('.nav');
 const preLoader = document.querySelector('.preloadler');
 const header = document.querySelector('.header');
-
 btn_faqs.forEach((btn_faq, index) => {
     btn_faq.addEventListener('click', () => {
         // ans[index].style.
@@ -37,7 +36,7 @@ btn_faqs.forEach((btn_faq, index) => {
     })
 })
 
-vidPlay.forEach((play, index) => {
+/*vidPlay.forEach((play, index) => {
     play.addEventListener('click',() => {
         let vidCont = document.querySelectorAll('.vid-play');
         if(vid[index].play() == true) {
@@ -52,10 +51,18 @@ vidPlay.forEach((play, index) => {
         }
     })
 })
-
+*/
 
 navBar.addEventListener('click', () =>{
     nav.classList.toggle('active');
+})
+
+window.addEventListener('click', (e) => {
+    let target = e.target;
+    let navBarChilds = navBar.children;
+    if( target != nav && target != navBar) {
+        nav.classList.remove('active')
+    }
 })
 
 window.addEventListener('load', () => {
