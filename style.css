@@ -4,7 +4,7 @@
 
 /* Themes */
 :root {
-    --color-one: #fab3a9;
+--color-one: #fab3a9;
     --color-two: #c6ad94;
     --color-gradient-two:#c6ad9400;
     --color-gradient-r-two:#c6ad949d;
@@ -13,10 +13,9 @@
     --color-four-gradient: #46323940;
     --color-five: #ed6b86;
     --color-six: #fef9fa;
+    --color-six-gradient: rgba(254,249,250,.75);
 
-
-    --box-shadow-one:-2px -2px 13px var(--color-four-gradient);
-}
+    --box-shadow-one:-2px -2px 13px var(--color-four-gradient);}
 /* Themes End */
 /* General Styling */
 * {
