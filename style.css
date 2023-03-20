@@ -298,7 +298,7 @@ body {
     background-size:  50vw 100%;
     background-position:  top right;
 }
-}.h-hero::before {
+.h-hero::before {
     content: '';
     position: absolute;
     top: 0;
