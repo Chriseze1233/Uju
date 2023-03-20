@@ -933,6 +933,7 @@ textarea.inps {
     .hero{
         background-size: cover;
         text-align: center;
+background-position: center center;
     }
 
     .h-hero::before {
