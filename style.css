@@ -296,7 +296,7 @@ body {
 .h-hero {
     background: linear-gradient(var(--color-gradient-two), var(--color-gradient-two)), url(./images/pic2.jpg) no-repeat;
     background-size:  50vw 100%;
-    background-position:  top center;
+    background-position:  top right;
 }
 }.h-hero::before {
     content: '';
