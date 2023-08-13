@@ -163,7 +163,7 @@ body {
 }
 
 .trans {
-    transition: .5s ease-in-out;
+    transition: 1.5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -ms-transition: .5s ease-in-out;
@@ -218,7 +218,7 @@ body {
 /* Header styling */
 .header {
     min-height: 2.5em;
-    z-index: 1000;
+    z-index: 100;
     padding: .2em 2em;
     transition: .5s linear;
 }
@@ -377,6 +377,58 @@ body {
     text-decoration: underline;
     -moz-text-decoration-color: var(--color-six);
     text-decoration-color: var(--color-six);
+}
+
+.info-home-cont {
+    background-color: rgba(0, 0, 0, .10);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    padding: 0 .5em;
+    z-index: -100;
+    display: none;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.info-home-cont.info-show {
+    display: flex;
+    transform: scale(1);
+    transition: transform .5s;
+    z-index: 100;
+}
+
+.info-home {
+    max-width: calc(100% - 3em);
+    padding: .5em;
+    border-radius: .5em;
+    background: var(--color-six-gradient);
+    box-shadow: var(--box-shadow-one);
+}
+
+.close-info {
+    padding: .5em;
+    color: var(--color-one);
+    right: 2px;
+    top: 2px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.info-home h2 {
+    color: var(--color-three);
+    margin-bottom: .25em;
+}
+
+.info-home p {
+    color: var(--color-four);
+}
+
+.info-home span {
+    margin-top: .25em;
+}
+
+.info-home span a {
+    color: var(--color-five);
 }
     /* Hero Section Styling  End */
     /* Accomplishment Styling */
@@ -649,6 +701,7 @@ input.inps {
 }
 
 textarea.inps {
+    resize: none;
     height: 6em;
 }
 
@@ -799,6 +852,57 @@ textarea.inps {
     color: var(--color-five);
 }
 
+.whatsApp-contact {
+    bottom: 15px;
+    right: 5px;
+    display: none;
+    z-index: 1000;
+    color: var(--color-six);
+}
+
+.whatsApp-contact.show {
+    display: block;
+}
+
+.whatsApp-contact a {
+    color: var(--color-six);
+}
+
+.whatsApp-contact p {
+    padding: .5em;
+    background-color: green;
+    border-radius: .25em;
+    z-index: 1;
+    pointer-events: none;
+    border: .1em solid var(--color-six);
+    animation: hide 20s infinite reverse;
+    text-align: center;
+    transform: scale(.7) translateX(.75em);
+}
+
+.whatsApp-contact p::before {
+    content: '';
+    width: .6em;
+    height: .6em;
+    border-right: .1em solid var(--color-six);
+    border-top: .1em solid var(--color-six);
+    background-color: green;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.whats-icon {
+    width: 2em;
+    height: 2em;
+    background-color: green;
+    border-radius: 50%;
+    box-shadow: var(--color-four-gradient) 2px 2px 3px;
+    display: block;
+}
+
 .preloadler {
     position: fixed;
     background-color: var(--color-four);
@@ -852,9 +956,48 @@ textarea.inps {
         opacity: .8;
     }
 }
+
+@keyframes hide {
+    0% {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    74% {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    75% {
+        width: 100%;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        overflow: visible;
+        opacity: 1;
+    }
+}
     /* Animation Styling End */
     /* Rsponsivenss styling */
-@media screen and (max-width: 937px) {
+
+    @media screen and (max-width: 1024px) {
+        .h-hero {
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .h-hero::before {
+            width: 100%;
+            opacity: .6;
+        }
+    }    
+
+    @media screen and (max-width: 937px) {
     .grid-many-spans {
         grid-template-rows: repeat(12, minmax(50px, 1fr));
     }
@@ -886,7 +1029,6 @@ textarea.inps {
 
 @media screen and (max-width: 767px) {
     .nav {
-
         position: fixed;
         right: .5em;
         width: fit-content;
@@ -928,12 +1070,14 @@ textarea.inps {
         z-index: 1;
         display: block;
         font-size: 1.6em;
+        cursor: pointer;
+        color: var(--color-five);
     }
 
     .hero{
         background-size: cover;
         text-align: center;
-background-position: center center;
+        background-position: center center;
     }
 
     .h-hero::before {
