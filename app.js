@@ -19,6 +19,9 @@ const navBar = document.querySelector('.navBar .e');
 const nav = document.querySelector('.nav');
 const preLoader = document.querySelector('.preloadler');
 const header = document.querySelector('.header');
+const whatsAppBtn =document.querySelector('.whatsApp-contact')
+
+
 btn_faqs.forEach((btn_faq, index) => {
     btn_faq.addEventListener('click', () => {
         // ans[index].style.
@@ -67,6 +70,10 @@ window.addEventListener('click', (e) => {
 
 window.addEventListener('load', () => {
     preLoader.classList.add('hide');
+    window.setTimeout(() => {
+        whatsAppBtn.classList.add('show')
+    }, 5000)
+
 })
 
 window.addEventListener('scroll', () => {
