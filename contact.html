@@ -7,6 +7,7 @@
     <title>Richy.com/contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="o-page-body">
     <header class="header pos-rel header-oPage full-width leto flex js-btn al-cnt">
@@ -22,10 +23,10 @@
                 </div>
             </div>
             <ul class="nav flex gap trans">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="collections.html">Collections</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>    <main class="main">
@@ -35,7 +36,7 @@
         </section>
         <section class="section form">
             <div class="contactCont grid-two grid">
-                <div class="contactDetails pos-rel">
+                <div class="contactDetails pos-rel anim-var opacity-anim trans">
                     <div class="contactDWrap pos-rel hor-cnt">
                         <img src="./images/call.svg" alt="" class="contactImg">
                         <h3 class="card-title-from">Contact Us</h3>
@@ -83,7 +84,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="https://formspree.io/f/xdovgqlr" method="POST" id="my-form">
+                <form action="https://formspree.io/f/xdovgqlr" method="POST" id="my-form" class="anim-hor opacity-anim trans">
                     <h3 class="frm-title"><span>Form</span> Submission</h3>
                     <input type="text" placeholder="Name" class="inps" name="Name" required>
                     <input type="email" placeholder="Email" class="inps" name="Email" required>
@@ -100,7 +101,7 @@
 
     <footer class="footer">
         <div class="footCont grid grid-many section">
-            <div class="nav-foot-cont">
+            <div class="nav-foot-cont anim-var opacity-anim trans">
                 <h3 class="footer-title">Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -109,7 +110,7 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="nav-foot-cont">
+            <div class="nav-foot-cont anim-var opacity-anim trans">
                 <h3 class="footer-title">Popular Links</h3>
                 <ul>
                     <li><a href="collections.html#gallery">Gallery</a></li>
@@ -118,7 +119,7 @@
                     <li><a href="index.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="nav-foot-cont">
+            <div class="nav-foot-cont anim-var opacity-anim trans">
                 <h3 class="footer-title">Get In Touch</h3>
                 <ul>
                     <li>
@@ -141,7 +142,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="nav-foot-cont">
+            <div class="nav-foot-cont anim-var opacity-anim trans">
                 <h3 class="footer-title">Follow Us</h3>
                 <ul>
                     <li>
@@ -177,12 +178,20 @@
             </h4>
         </div>
     </footer>
+    
+    <div class="whatsApp-contact pos-fixed">
+        <a href="https://wa.me/8102508640?text=Hi%2C%20I%20would%20like%20%to%20more%20about%20your%20company%20" class="flex">
+            <p class="pos-rel">Whatsapp</p>
+            <span class="fab fa-whatsapp whats-icon"></span>
+        </a>
+    </div>
 
     <div class="preloadler leto full-width flex al-cnt js-cnt trans">
         <img src="./images/ajax_loader_3.gif" alt="">
     </div>
 
     <script src="./n.js"></script>
+    <script src="./anim.js"></script>
     <script src="./app.js"></script>
 </body>
 </html>
