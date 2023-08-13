@@ -900,8 +900,7 @@ textarea.inps {
     background-color: green;
     border-radius: 50%;
     box-shadow: var(--color-four-gradient) 2px 2px 3px;
-    display: block;
-    font-size: 2em;
+    font-size: 100%;
 }
 
 .preloadler {
